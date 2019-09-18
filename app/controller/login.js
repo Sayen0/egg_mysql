@@ -4,10 +4,12 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async login(req,res){
-    var xixi='这段话是=>controller渲染到ejs文件中'
+    var name='这段话是=>controller渲染到ejs文件中'
      await this.ctx.render('home/home.ejs',{
-        username:xixi
+        username:name
     }) 
+
+
     //await this.ctx.render('home/home.ejs')
   }
   async do(){
