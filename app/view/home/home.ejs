@@ -1,0 +1,47 @@
+<html>
+    <head>整天Hello World
+        <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+
+    </head>
+    <body>
+        <div id="app">
+            HelloWorld没点儿别的
+            <form id="form">
+              
+                <input type="text" name="username" id="username"/><br/>
+                <input type="text" name="password" id="password"/>
+                <input type="submit" id="doLogin" value="Login"></input>
+                <%- username %>
+            </form>
+        </div>
+    </body>
+
+     <script>
+         $(function(){
+             $("#doLogin").click(function(e){
+                 var username=$('#username').val();
+                 var password=$('#password').val();
+                 console.log(username)
+                 // alert(username,password)
+                    // function Spost(){
+                    // $.post("/login",{
+                    //     username:username,
+                    //     password:password
+                    // })
+                    // var from=document.getElementById('from');
+                    // form.submit();
+                    // }
+                        $.ajax({
+                        type:'get',
+                        dataType:'json',
+                        url:"http://127.0.0.1/login",
+                        success:function(data){
+                            alert("suc")
+                            //window.location.href="https://www.baidu.com"
+                        }
+                    })
+             })
+             
+         })
+     </script>
+</html>
