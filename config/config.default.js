@@ -28,13 +28,13 @@ module.exports = appInfo => {
   //     enable: false
   //   }
   // };
-  
-  
-  config.view={
-    mapping:{
-        '.html':'ejs' //'指定后缀':'指定模板引擎'
-    }
-  },
+
+
+  config.view = {
+    mapping: {
+      '.html': 'ejs', // '指定后缀':'指定模板引擎'
+    },
+  };
   // config.mongoose={
   //   client:{
   //     url:''
@@ -42,29 +42,32 @@ module.exports = appInfo => {
   // }
 
 
-
   // config.cors = {
   //   origin:'*',
   //   allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   // };
-  config.view={
-    mapping:{
-      '.ejs':'ejs'
-    }
+  // config.scripts = {
+  //   test: 'egg-bin test',
+  //   cov: 'egg-bin cov',
+  // };
+  config.view = {
+    mapping: {
+      '.ejs': 'ejs',
+    },
   };
-  config.security={
-    csrf:{
-      enable:false,
-      ignore:ctx=>{
-        if(ctx.request.url=='/home/doLogin'){
+  config.security = {
+    csrf: {
+      enable: false,
+      ignore: ctx => {
+        if (ctx.request.url === '/home/doLogin') {
           return true;
         }
         return false;
-      }
-    }
+      },
+    },
   };
 
-  config.mysql={
+  config.mysql = {
     client: {
       // host
       host: 'localhost',
@@ -81,7 +84,7 @@ module.exports = appInfo => {
     app: true,
     // 是否加载到 agent 上，默认关闭
     agent: false,
-  }
+  };
 
   return {
     ...config,

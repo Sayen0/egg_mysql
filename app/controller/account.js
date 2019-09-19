@@ -7,10 +7,10 @@ class AccountController extends Controller {
     // const result=await this.app.mysql.insert('daily',{
     //   count:'123'
     // })
-    let {ctx,service}=this;
-    let result=await ctx.service.data.getData();
-    ctx.body=result;
-    console.log(result.affectedRows)
+    const { ctx } = this;
+    const result = await ctx.service.data.getData();
+    ctx.body = result;
+    console.log(result.affectedRows);
   }
 }
 

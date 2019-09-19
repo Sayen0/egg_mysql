@@ -6,26 +6,34 @@ module.exports = {
   // static: {
   //   enable: true,
   // }
-  mysql:{
-    enable:true,
-    package:'egg-mysql'
+  mysql: {
+    enable: true,
+    package: 'egg-mysql',
   },
   // cors:{
   //   enable: true,
   //   package: 'egg-cors'
   // },
-  
-  ejs:{
-    enable:true,
-    package:'egg-view-ejs'
+
+  ejs: {
+    enable: true,
+    package: 'egg-view-ejs',
   },
-  mongoose:{
-    enable:true,
-    package:'egg-mongoose'
+  mongoose: {
+    enable: true,
+    package: 'egg-mongoose',
   },
-  view:{
-    enable:true,
-    package:'egg-view'
-  }
+  view: {
+    enable: true,
+    package: 'egg-view',
+  },
+  // test: {
+  //   enable: true,
+  //   package: 'egg-bin test',
+  // },
+  // cov: {
+  //   enable: true,
+  //   package: 'egg-bin cov',
+  // },
 
 };
